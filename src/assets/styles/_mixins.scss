@@ -1,0 +1,41 @@
+@mixin laptopL() {
+  @media(max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media(max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media(max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobileL() {
+  @media(max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin mobileM() {
+  @media(max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobileS() {
+  @media(max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin customBreakpoint($width) {
+  @media(max-width: $width) {
+    @content;
+  }
+}

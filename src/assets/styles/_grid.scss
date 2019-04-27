@@ -1,0 +1,55 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--align-top {
+    align-items: flex-start;
+  }
+}
+
+.col {
+  width: 100%;
+
+  @for $i from 1 through  $columns {
+    // columns width for media width > 1024px
+    &-#{$i} {
+      width: (($i / $columns) * 100%);
+    }
+
+    // columns width for media width <= 1024px
+    @include laptop() {
+      &-md-#{$i} {
+        width: (($i / $columns) * 100%);
+      }
+    }
+
+    // columns width for media width <= 768px
+    @include tablet() {
+      &-sm-#{$i} {
+        width: (($i / $columns) * 100%);
+      }
+    }
+
+    // columns width for media width <= 425px
+    @include mobileL() {
+      &-xs-#{$i} {
+        width: (($i / $columns) * 100%);
+      }
+    }
+  }
+}
