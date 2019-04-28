@@ -1,5 +1,5 @@
 <template>
-  <section class="test-package">
+  <section class="test-package" id="package-box">
     <div class="test-package__content container">
       <div class="row row--wrap row--space-between packages">
         <div class="col-6 col-sm-12 packages__image">

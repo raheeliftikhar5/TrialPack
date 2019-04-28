@@ -3,7 +3,7 @@
     <div class="banner__content container">
       <div class="col-6 col-sm-12">
         <h1>Discover our skin friendliness</h1>
-        <button class="button">NOW CHOOSE YOUR SIZE</button>
+        <button class="button" @click="scrollToPackageBox">NOW CHOOSE YOUR SIZE</button>
       </div>
     </div>
   </section>
@@ -16,6 +16,18 @@ export default {
   data() {
     return {
       standardBadge,
+    }
+  },
+  methods: {
+    scrollToPackageBox() {
+      const ele = document.getElementById("package-box");
+      if (ele) {
+        window.scrollTo({
+          top: ele.offsetTop,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
     }
   }
 }
