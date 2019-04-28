@@ -37,9 +37,6 @@ export default {
     align-items: unset;
   }
 
-  @include mobileL() {
-  }
-
   &__content {
     // width: 100%;
     // padding-left: 7vw;
@@ -54,6 +51,12 @@ export default {
 
       .button {
         width: 80%;
+      }
+    }
+
+    @include mobileL() {
+      .button {
+        width: 100%;
       }
     }
   }
